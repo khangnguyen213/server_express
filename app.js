@@ -3,6 +3,7 @@ import fs from 'fs';
 import bodyParser from 'body-parser';
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
@@ -128,6 +129,6 @@ app.use('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server run at: http://127.0.0.1:3000');
 });
